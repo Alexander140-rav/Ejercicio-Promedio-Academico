@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PromedioAcademico.Views.PromedioPage"
+             Title="Promedio Académico">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Entry Placeholder="Calificación Unidad 1 (0 - 10)"
+               Keyboard="Numeric"
+               Text="{Binding Calificacion1Text}" />
+
+        <Entry Placeholder="Calificación Unidad 2 (0 - 10)"
+               Keyboard="Numeric"
+               Text="{Binding Calificacion2Text}" />
+
+        <Entry Placeholder="Calificación Unidad 3 (0 - 10)"
+               Keyboard="Numeric"
+               Text="{Binding Calificacion3Text}" />
+
+        <Button Text="Calcular promedio"
+                Command="{Binding CalcularPromedioCommand}" />
+
+        <Label Text="{Binding MensajeError}"
+               TextColor="Red"
+               FontAttributes="Bold" />
+
+        <Label Text="{Binding PromedioResultado}"
+               FontSize="18"
+               FontAttributes="Bold" />
+
+        <Label Text="{Binding NivelResultado}"
+               FontSize="18" />
+    </VerticalStackLayout>
+</ContentPage>
